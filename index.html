@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>H.I.P.S. — Mining HG Infinite Banking Reference</title>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mining Gems — Infinite Banking Reference">
+<meta property="og:description" content="13 units covering how Infinite Banking works, what it isn't, and how to apply it. Hidden Gems Financial.">
+<meta property="og:image" content="https://assets.cdn.filesafe.space/VAzLM9UQAimhEsqIbaoE/media/64d12ed29b131f4bfb22d4f1.png">
+<meta property="og:url" content="https://carrwaynem.github.io/hg-ibc-reference/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mining Gems — Infinite Banking Reference">
+<meta name="twitter:description" content="13 units covering how Infinite Banking works, what it isn't, and how to apply it. Hidden Gems Financial.">
+<meta name="twitter:image" content="https://assets.cdn.filesafe.space/VAzLM9UQAimhEsqIbaoE/media/64d12ed29b131f4bfb22d4f1.png">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2/dist/tabler-icons.min.css">
+<style>
+  :root{
+    --bg:#f6f7f5;
+    --surface-1:#ffffff;
+    --surface-2:#f1f4f2;
+    --accent:#1cb0f6;
+    --accent-dark:#0d8fce;
+    --gold:#ffc800;
+    --text-primary:#1f2937;
+    --text-secondary:#6b7280;
+    --success-bg:#e6f9d5;
+    --success-text:#2b6a00;
+    --success-border:#58cc02;
+    --warning-bg:#fff8e6;
+    --warning-text:#8a6100;
+    --warning-border:#f0c14b;
+    --verified-bg:#e7f6ff;
+    --verified-text:#0d6b96;
+    --hg-blue:#8aa4c9;
+    --hg-blue-dark:#5f7ba3;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    color:var(--text-primary);
+  }
+  .shell{max-width:780px;margin:0 auto;padding:0 16px 80px;}
+
+  /* ---- Dark hero banner, styled after Hidden Gems Financial's own infographics ---- */
+  .hero-banner{
+    background:
+      radial-gradient(ellipse at 20% 0%, #23262b 0%, #14161a 60%),
+      linear-gradient(160deg,#1a1c20,#0d0e10);
+    border-radius:0 0 28px 28px;
+    padding:22px 18px 26px;
+    margin:0 -16px 18px;
+    color:#fff;
+  }
+  .hg-logo{display:flex;align-items:center;gap:9px;margin-bottom:18px;}
+  .hg-logo svg{width:29px;height:29px;flex-shrink:0;}
+  .hg-logo .wordmark{font-size:12.5px;letter-spacing:1.2px;font-weight:600;color:#dfe6ee;}
+  .hg-logo .wordmark b{font-weight:800;color:#fff;}
+  .hero-title{display:flex;align-items:flex-end;gap:12px;margin-bottom:6px;}
+  .hero-title .hero-num{font-size:56px;font-weight:800;line-height:0.8;color:#fff;}
+  .hero-title .hero-steps-label{font-size:26px;font-weight:800;color:#fff;line-height:1;}
+  .hero-title .hero-sub{font-size:12px;font-weight:700;letter-spacing:0.6px;color:var(--hg-blue);margin-top:4px;}
+  .hero-path-wrap{margin-top:12px;}
+  .hero-path-wrap svg .path-node{cursor:pointer;}
+  .hero-path-wrap svg .path-node:hover .node-bg{filter:brightness(1.18);}
+  .hero-path-wrap svg .path-node:active .node-bg{filter:brightness(0.9);}
+  .hero-tagline{text-align:center;font-size:12.5px;font-weight:700;color:#9aa7b8;margin-top:6px;letter-spacing:0.3px;}
+
+  .stat-bar{display:flex;gap:10px;margin:0 0 14px;flex-wrap:wrap;}
+  .stat-pill{display:flex;align-items:center;gap:5px;background:var(--surface-1);border-radius:12px;padding:6px 12px;font-size:12.5px;font-weight:700;}
+  .stat-pill i{font-size:16px;}
+  .stat-pill.streak i{color:#ff9600;}
+  .stat-pill.gems i{color:var(--accent);}
+  .stat-pill.hearts i{color:#ff4b4b;}
+
+  .search-sticky{position:sticky;top:0;background:var(--bg);z-index:20;padding:8px 0 10px;}
+  .search-wrap{position:relative;}
+  .search-wrap i{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--text-secondary);font-size:18px;}
+  #search{
+    width:100%;padding:12px 14px 12px 40px;border-radius:14px;border:2px solid var(--surface-2);
+    font-size:15px;background:var(--surface-1);outline:none;
+  }
+  #search:focus{border-color:var(--accent);}
+  #match-count{font-size:12px;color:var(--text-secondary);margin-top:6px;min-height:16px;}
+
+  nav.unit-nav{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 18px;}
+  nav.unit-nav a{
+    font-size:11.5px;font-weight:600;text-decoration:none;color:var(--accent-dark);
+    background:var(--verified-bg);padding:5px 10px;border-radius:10px;
+  }
+
+  section.unit{margin-bottom:12px;scroll-margin-top:80px;background:var(--surface-1);border-radius:18px;overflow:hidden;}
+  .unit-head{display:flex;align-items:center;gap:10px;padding:14px 16px;cursor:pointer;user-select:none;}
+  .unit-head .icon-badge{
+    width:34px;height:34px;border-radius:10px;background:var(--verified-bg);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .unit-head .icon-badge i{font-size:18px;color:var(--accent-dark);}
+  .unit-num{font-size:11px;font-weight:700;color:var(--accent-dark);text-transform:uppercase;letter-spacing:0.4px;}
+  .unit-title{font-size:16px;font-weight:700;}
+  .unit-head .chevron{margin-left:auto;font-size:18px;color:var(--text-secondary);transition:transform .2s ease;flex-shrink:0;}
+  .unit.open .unit-head .chevron{transform:rotate(180deg);}
+  .unit-body{display:none;padding:0 16px 16px;}
+  .unit.open .unit-body{display:block;}
+  .unit-desc{font-size:13px;color:var(--text-secondary);margin:0 0 12px;}
+
+  .card{background:var(--surface-2);border-radius:16px;padding:16px 18px;margin-bottom:10px;}
+  .card-title-row{display:flex;align-items:center;gap:8px;margin-bottom:8px;}
+  .card-title-row i{font-size:18px;color:var(--accent-dark);}
+  .card-title{font-weight:700;font-size:14.5px;}
+  .badge{margin-left:auto;font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:10px;white-space:nowrap;}
+  .badge.verified{background:var(--verified-bg);color:var(--verified-text);}
+  .badge.source{background:#f1e9ff;color:#6a3fc7;}
+  .card-body{font-size:13.5px;line-height:1.55;color:var(--text-primary);}
+  .card-body b{font-weight:700;}
+  .fine-print{background:var(--warning-bg);border:1px solid var(--warning-border);}
+  .fine-print .card-title-row i{color:var(--warning-text);}
+  .quiz-option{background:#fff;border-radius:12px;padding:9px 12px;font-size:13px;margin-bottom:7px;}
+  .quiz-option.correct{background:var(--success-bg);border:2px solid var(--success-border);font-weight:600;display:flex;align-items:center;gap:8px;}
+  .quiz-option.correct i{color:var(--success-text);}
+  .term-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:6px;}
+  .term-grid div{background:#fff;border-radius:10px;padding:9px 10px;font-size:12.5px;}
+  .step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px;}
+  .step-grid div{background:#fff;border-radius:10px;padding:10px 8px;font-size:11.5px;text-align:center;}
+  .step-grid .num{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:11px;margin-bottom:5px;}
+  @media (max-width:480px){.step-grid{grid-template-columns:1fr 1fr;}}
+  table.compare{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:6px;}
+  table.compare th{text-align:left;color:var(--text-secondary);padding:6px 4px;font-weight:700;}
+  table.compare td{padding:8px 4px;border-top:1px solid var(--surface-1);}
+  .good{color:var(--success-text);}
+  .warn{color:var(--warning-text);}
+  .hidden{display:none !important;}
+  .no-results{display:none;text-align:center;color:var(--text-secondary);font-size:14px;padding:40px 0;}
+
+  .illus-card{display:flex;gap:14px;align-items:flex-start;}
+  .illus-card .illus{flex-shrink:0;width:104px;}
+  .illus-card .illus svg{width:100%;height:auto;display:block;}
+  .illus-card .body-col{flex:1;min-width:0;}
+  @media (max-width:480px){
+    .illus-card{flex-direction:column;}
+    .illus-card .illus{width:100%;max-width:180px;margin:0 auto;}
+  }
+
+  .fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px;}
+  .fit-grid .col-head{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.3px;margin-bottom:6px;}
+  .fit-grid .good-col .col-head{color:var(--success-text);}
+  .fit-grid .warn-col .col-head{color:var(--warning-text);}
+  .fit-item{background:#fff;border-radius:10px;padding:8px 10px;font-size:12.5px;margin-bottom:6px;}
+  @media (max-width:480px){.fit-grid{grid-template-columns:1fr;}}
+
+  .keep-learning{display:none;background:var(--verified-bg);border-radius:16px;padding:14px 16px;margin-top:12px;}
+  .keep-learning.visible{display:block;}
+  .keep-learning .kl-head{display:flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;color:var(--verified-text);margin-bottom:9px;text-transform:uppercase;letter-spacing:0.3px;}
+  .keep-learning .kl-head i{font-size:16px;}
+  .kl-item{
+    display:flex;align-items:center;gap:8px;background:#fff;border-radius:12px;padding:9px 12px;margin-bottom:7px;
+    cursor:pointer;font-size:13px;
+  }
+  .kl-item:last-child{margin-bottom:0;}
+  .kl-item:hover{background:var(--surface-2);}
+  .kl-item i.kl-icon{font-size:16px;color:var(--accent-dark);flex-shrink:0;}
+  .kl-item .kl-text b{display:block;font-weight:700;color:var(--text-primary);}
+  .kl-item .kl-text span{font-size:11.5px;color:var(--text-secondary);}
+  .kl-item i.kl-arrow{margin-left:auto;font-size:15px;color:var(--text-secondary);flex-shrink:0;}
+  .card.flash{animation:flash-highlight 1.6s ease;}
+  @keyframes flash-highlight{
+    0%{box-shadow:0 0 0 3px var(--accent);}
+    100%{box-shadow:0 0 0 0 rgba(28,176,246,0);}
+  }
+
+  .res-item{display:flex;align-items:center;gap:8px;background:#fff;border-radius:10px;padding:8px 10px;font-size:12.5px;margin-bottom:6px;}
+  .res-item:last-child{margin-bottom:0;}
+  .res-item i{color:var(--accent-dark);font-size:15px;flex-shrink:0;}
+  .res-item .res-text{flex:1;min-width:0;}
+  .res-item .res-dur{font-size:11px;color:var(--text-secondary);white-space:nowrap;flex-shrink:0;}
+  .res-item a{color:var(--accent-dark);font-weight:700;text-decoration:none;flex-shrink:0;}
+  .res-item a:hover{text-decoration:underline;}
+  .res-subhead{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.4px;color:var(--text-secondary);margin:14px 0 6px;}
+  .res-subhead:first-child{margin-top:0;}
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <div class="hero-banner">
+    <div class="hg-logo">
+      <svg viewBox="0 0 65 64" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="hgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#b9c6d6"/>
+            <stop offset="50%" stop-color="#ffffff"/>
+            <stop offset="100%" stop-color="#a9bbcf"/>
+          </linearGradient>
+        </defs>
+        <path d="M3 32 L15 18 L21 18 L21 46 L15 46 Z" fill="url(#hgGrad)"/>
+        <path d="M18 18 L18 46" stroke="#0d0e10" stroke-width="1" opacity="0.4"/>
+        <rect x="21" y="18" width="6" height="28" fill="url(#hgGrad)"/>
+        <rect x="27" y="29" width="6" height="6" fill="url(#hgGrad)"/>
+        <path d="M60.16 36.79 A14 14 0 1 1 60.16 27.21 L54.52 29.26 A8 8 0 1 0 54.52 34.74 Z" fill="url(#hgGrad)"/>
+        <rect x="44" y="29" width="14" height="6" fill="url(#hgGrad)"/>
+      </svg>
+      <div class="wordmark">H.I.P.S. <b>·</b> Mining Gems</div>
+    </div>
+    <div class="hero-title">
+      <div class="hero-num">13</div>
+      <div>
+        <div class="hero-steps-label">Units</div>
+        <div class="hero-sub">TO LEARN &amp; APPLY THE IBC</div>
+      </div>
+    </div>
+
+    <div class="hero-path-wrap">
+      <svg viewBox="0 0 340 1280" xmlns="http://www.w3.org/2000/svg">
+        <path d="M65 35 C 90.0 50.8, 215.0 98.3, 215.0 130.0 C 215.0 161.7, 65.0 193.3, 65.0 225.0 C 65.0 256.7, 215.0 288.3, 215.0 320.0 C 215.0 351.7, 65.0 383.3, 65.0 415.0 C 65.0 446.7, 215.0 478.3, 215.0 510.0 C 215.0 541.7, 65.0 573.3, 65.0 605.0 C 65.0 636.7, 215.0 668.3, 215.0 700.0 C 215.0 731.7, 65.0 763.3, 65.0 795.0 C 65.0 826.7, 215.0 858.3, 215.0 890.0 C 215.0 921.7, 65.0 953.3, 65.0 985.0 C 65.0 1016.7, 215.0 1048.3, 215.0 1080.0 C 215.0 1111.7, 90.0 1159.2, 65.0 1175.0"
+              fill="none" stroke="#fff" stroke-opacity="0.9" stroke-width="9" stroke-linecap="round"/>
+        <path d="M65 35 C 90.0 50.8, 215.0 98.3, 215.0 130.0 C 215.0 161.7, 65.0 193.3, 65.0 225.0 C 65.0 256.7, 215.0 288.3, 215.0 320.0 C 215.0 351.7, 65.0 383.3, 65.0 415.0 C 65.0 446.7, 215.0 478.3, 215.0 510.0 C 215.0 541.7, 65.0 573.3, 65.0 605.0 C 65.0 636.7, 215.0 668.3, 215.0 700.0 C 215.0 731.7, 65.0 763.3, 65.0 795.0 C 65.0 826.7, 215.0 858.3, 215.0 890.0 C 215.0 921.7, 65.0 953.3, 65.0 985.0 C 65.0 1016.7, 215.0 1048.3, 215.0 1080.0 C 215.0 1111.7, 90.0 1159.2, 65.0 1175.0"
+              fill="none" stroke="#0d0e10" stroke-width="2" stroke-dasharray="2 14" stroke-linecap="round"/>
+
+        <g font-family="-apple-system,sans-serif">
+          <g class="path-node" data-target="u1">
+            <circle cx="65" cy="35" r="22" fill="var(--hg-blue)" class="node-bg" stroke="#fff" stroke-width="3"/>
+            <g transform="translate(65,35) scale(1.3) translate(-65,-35)">
+              <path d="M65 21 L55 30 H75 Z M58 30v11 M65 30v11 M72 30v11 M53 42h24" stroke="#141518" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <text x="65" y="79" font-size="10" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="65" dy="0">The</tspan><tspan x="65" dy="11">Basics</tspan></text>
+          </g>
+
+          <g class="path-node" data-target="u2">
+            <circle cx="215" cy="130" r="22" fill="var(--hg-blue)" class="node-bg" stroke="#fff" stroke-width="3"/>
+            <g transform="translate(215,130) scale(0.74) translate(-215,-130)">
+              <path d="M215 108 L200 120 L230 120 Z" fill="#141518"/>
+              <rect x="199" y="120" width="32" height="3" fill="#141518"/>
+              <rect x="201" y="123" width="28" height="15" fill="#141518"/>
+              <rect x="205" y="123" width="2" height="15" fill="var(--hg-blue)"/>
+              <rect x="211" y="123" width="2" height="15" fill="var(--hg-blue)"/>
+              <rect x="219" y="123" width="2" height="15" fill="var(--hg-blue)"/>
+              <rect x="225" y="123" width="2" height="15" fill="var(--hg-blue)"/>
+              <rect x="197" y="138" width="36" height="4" fill="#141518"/>
+              <rect x="195" y="142" width="40" height="2" fill="#141518"/>
+              <circle cx="215" cy="129" r="2.3" fill="var(--hg-blue)"/>
+              <path d="M210.8 132.5 L219.2 132.5 L217.5 137 L220.5 143.5 L216 143.5 L215 140 L214 143.5 L209.5 143.5 L212.5 137 Z" fill="var(--hg-blue)"/>
+            </g>
+            <text x="215" y="174" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">BYOB</text>
+          </g>
+
+          <g class="path-node" data-target="u3">
+            <circle cx="65" cy="225" r="22" fill="var(--hg-blue)" class="node-bg" stroke="#fff" stroke-width="3"/>
+            <g transform="translate(65,225) scale(1.0) translate(-65,-225)">
+              <path d="M55 233h6v-6h6v-6h6v-6h6" stroke="#141518" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <text x="65" y="269" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">HDIW</text>
+          </g>
+
+          <g class="path-node" data-target="u4">
+            <circle cx="215" cy="320" r="22" fill="var(--hg-blue)" class="node-bg" stroke="#fff" stroke-width="3"/>
+            <g transform="translate(215,320) scale(1.5) translate(-215,-320)">
+              <rect x="207" y="311" width="16" height="18" rx="1.5" stroke="#141518" stroke-width="1.4" fill="none"/>
+              <path d="M210 317h10 M210 321h10 M210 325h6" stroke="#141518" stroke-width="1.2"/>
+            </g>
+            <text x="215" y="364" font-size="10" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="215" dy="0">The</tspan><tspan x="215" dy="11">Policy</tspan></text>
+          </g>
+
+          <g class="path-node" data-target="u5">
+            <circle cx="65" cy="415" r="22" fill="var(--hg-blue)" class="node-bg" stroke="#fff" stroke-width="3"/>
+            <g transform="translate(65,415) scale(1.7) translate(-65,-415)">
+              <path d="M57 411h10l-3-3 M67 411h6 M57 419h6 M63 419h10l-3 3" stroke="#141518" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+            </g>
+            <text x="65" y="459" font-size="10" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="65" dy="0">Core</tspan><tspan x="65" dy="11">Mechanics</tspan></text>
+          </g>
+
+          <g class="path-node" data-target="u6">
+            <circle cx="215" cy="510" r="22" fill="var(--hg-blue)" class="node-bg" stroke="#fff" stroke-width="3"/>
+            <g transform="translate(215,510) scale(0.75,1.05) translate(-215,-510)">
+              <circle cx="215" cy="495" r="2.2" fill="#141518"/>
+              <path d="M215 497 C211.5 498.5,209.5 502,210 505.5 C210.5 508,219.5 508,220 505.5 C220.5 502,218.5 498.5,215 497 Z" fill="#141518"/>
+              <path d="M212.5 501 L217.5 499.5" stroke="var(--hg-blue)" stroke-width="1" stroke-linecap="round"/>
+              <ellipse cx="215" cy="508" rx="7.5" ry="2" fill="#141518"/>
+              <rect x="212.5" y="510" width="5" height="4" fill="#141518"/>
+              <path d="M212.5 514 L217.5 514 L222 517 L208 517 Z" fill="#141518"/>
+              <rect x="206" y="517" width="18" height="2" fill="#141518"/>
+              <ellipse cx="215" cy="519" rx="9" ry="2.2" fill="#141518"/>
+            </g>
+            <text x="215" y="554" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">Principles</text>
+          </g>
+
+          <g class="path-node" data-target="u7">
+            <circle cx="65" cy="605" r="22" fill="var(--hg-blue)" class="node-bg" stroke="#fff" stroke-width="3"/>
+            <g transform="translate(65,605) scale(1.7) translate(-65,-605)">
+              <path d="M65 597 l7 13 h-14z" stroke="#141518" stroke-width="1.4" fill="none" stroke-linejoin="round"/>
+              <path d="M65 604v1 M65 606v1" stroke="#141518" stroke-width="1.6" stroke-linecap="round"/>
+            </g>
+            <text x="65" y="649" font-size="10" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="65" dy="0">What</tspan><tspan x="65" dy="11">It's</tspan><tspan x="65" dy="11">Not</tspan></text>
+          </g>
+
+          <g class="path-node" data-target="u8">
+            <circle cx="215" cy="700" r="22" fill="var(--hg-blue)" class="node-bg" stroke="#fff" stroke-width="3"/>
+            <g transform="translate(215,700) scale(1.55) translate(-215,-700)">
+              <path d="M215 690 l8 3.2v7.3c0 5.8-3.3 9.3-8 11.5-4.7-2.2-8-5.7-8-11.5v-7.3z" stroke="#141518" stroke-width="1.3" fill="none" stroke-linejoin="round"/>
+              <path d="M215 690v22.2 M209 696.5h12 M209.6 706h10.8" stroke="#141518" stroke-width="0.8" fill="none" opacity="0.7"/>
+              <path d="M211 700.5l3 3.5 6.5-7" stroke="#141518" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <text x="215" y="744" font-size="10" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="215" dy="0">Protect</tspan><tspan x="215" dy="11">It</tspan></text>
+          </g>
+
+          <g class="path-node" data-target="u9">
+            <circle cx="65" cy="795" r="22" fill="var(--hg-blue)" class="node-bg" stroke="#fff" stroke-width="3"/>
+            <g transform="translate(65,795) scale(1.15) translate(-65,-795)">
+              <circle cx="65" cy="797" r="9" stroke="#141518" stroke-width="1.3" fill="none"/>
+              <path d="M65 788v2 M74 797h-2 M65 806v-2 M56 797h2" stroke="#141518" stroke-width="1" fill="none" stroke-linecap="round"/>
+              <path d="M65 791v6l5 3" stroke="#141518" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M61 789q4 -5 8 0" stroke="#141518" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+              <circle cx="65" cy="782" r="2.3" stroke="#141518" stroke-width="1.2" fill="none"/>
+            </g>
+            <text x="65" y="839" font-size="10" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="65" dy="0">Retirement</tspan><tspan x="65" dy="11">&amp;</tspan><tspan x="65" dy="11">OPM</tspan></text>
+          </g>
+
+          <g class="path-node" data-target="u10">
+            <circle cx="215" cy="890" r="22" fill="var(--hg-blue)" class="node-bg" stroke="#fff" stroke-width="3"/>
+            <g transform="translate(215,890) scale(1.3) translate(-215,-890)">
+              <circle cx="215" cy="890" r="10.5" stroke="#141518" stroke-width="1.3" fill="none"/>
+              <circle cx="215" cy="890" r="6.5" stroke="#141518" stroke-width="1.3" fill="none"/>
+              <circle cx="215" cy="890" r="2.6" fill="#141518"/>
+              <path d="M215 877.5v3.5 M215 898.5v3.5 M202.5 890h3.5 M223.5 890h3.5" stroke="#141518" stroke-width="1.3" stroke-linecap="round"/>
+            </g>
+            <text x="215" y="934" font-size="10" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="215" dy="0">Apply</tspan><tspan x="215" dy="11">It</tspan></text>
+          </g>
+
+          <g class="path-node" data-target="u11">
+            <circle cx="65" cy="985" r="22" fill="var(--hg-blue)" class="node-bg" stroke="#fff" stroke-width="3"/>
+            <g transform="translate(65,985) scale(1.5) translate(-65,-985)">
+              <circle cx="61" cy="979" r="3.4" stroke="#141518" stroke-width="1.3" fill="none"/>
+              <circle cx="69" cy="979" r="3.4" stroke="#141518" stroke-width="1.3" fill="none"/>
+              <path d="M55 991c0-4 3-6 6-6s6 2 6 6 M63 991c0-4 3-6 6-6s6 2 6 6" stroke="#141518" stroke-width="1.2" fill="none"/>
+            </g>
+            <text x="65" y="1029" font-size="10" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="65" dy="0">Who</tspan><tspan x="65" dy="11">It's</tspan><tspan x="65" dy="11">For</tspan></text>
+          </g>
+
+          <g class="path-node" data-target="u12">
+            <circle cx="215" cy="1080" r="22" fill="var(--hg-blue)" class="node-bg" stroke="#fff" stroke-width="3"/>
+            <g transform="translate(215,1080) scale(1.5) translate(-215,-1080)">
+              <path d="M206 1074h18a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3h-8l-5 4v-4h-5a3 3 0 0 1-3-3v-6a3 3 0 0 1 3-3z" stroke="#141518" stroke-width="1.1" fill="none"/>
+              <text x="215" y="1083" font-size="8" font-weight="800" fill="#141518" text-anchor="middle">?</text>
+            </g>
+            <text x="215" y="1124" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">FAQ's</text>
+          </g>
+
+          <g class="path-node" data-target="u13">
+            <circle cx="65" cy="1175" r="22" fill="var(--hg-blue)" class="node-bg" stroke="#fff" stroke-width="3"/>
+            <g transform="translate(65,1175) scale(0.87) translate(-65,-1175)">
+              <path d="M57 1165a3 3 0 0 1 3-3h14v22h-14a3 3 0 0 1-3-3z M74 1162v22" stroke="#141518" stroke-width="1.2" fill="none" stroke-linejoin="round"/>
+              <path d="M60 1168h4 M60 1172h4 M60 1176h4" stroke="#141518" stroke-width="1.1" stroke-linecap="round"/>
+              <path d="M78.5 1168.5l7 5-7 5z" fill="#141518"/>
+            </g>
+            <text x="65" y="1219" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">Resources</text>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div class="hero-tagline">Tap any step to open it up</div>
+  </div>
+
+  <div class="stat-bar">
+    <div class="stat-pill streak"><i class="ti ti-flame"></i>13 units</div>
+    <div class="stat-pill gems"><i class="ti ti-diamond"></i>Verified facts</div>
+    <div class="stat-pill hearts"><i class="ti ti-heart"></i>No client names</div>
+  </div>
+
+  <div class="search-sticky">
+    <div class="search-wrap">
+      <i class="ti ti-search"></i>
+      <input id="search" type="text" placeholder="Search terms, concepts, definitions… e.g. &quot;dividend&quot;, &quot;MEC&quot;, &quot;IUL&quot;">
+    </div>
+    <div id="match-count"></div>
+  </div>
+
+  <div id="keep-learning" class="keep-learning"></div>
+
+  <nav class="unit-nav">
+    <a href="#u1">1. Foundations</a>
+    <a href="#u2">2. Becoming Your Own Banker</a>
+    <a href="#u3">3. The Hidden Gems Method</a>
+    <a href="#u4">4. Policy Anatomy</a>
+    <a href="#u5">5. Core Mechanics</a>
+    <a href="#u6">6. The Principles</a>
+    <a href="#u7">7. What It's Not</a>
+    <a href="#u8">8. Protect the Structure</a>
+    <a href="#u9">9. Retirement &amp; OPM</a>
+    <a href="#u10">10. Apply It</a>
+    <a href="#u11">11. Who It's For</a>
+    <a href="#u12">12. Common Questions</a>
+    <a href="#u13">13. Resources</a>
+  </nav>
+
+  <div id="content">
+
+  <!-- UNIT 1 -->
+  <section class="unit" id="u1">
+    <div class="unit-head">
+      <div class="icon-badge"><i class="ti ti-building-bank"></i></div>
+      <div><div class="unit-num">Unit 1</div><div class="unit-title">Foundations</div></div>
+      <i class="ti ti-chevron-down chevron"></i>
+    </div>
+    <div class="unit-body">
+    <p class="unit-desc">The big idea behind Infinite Banking, told in simple words.</p>
+
+    <div class="card searchable" data-tags="foundations,whole-life">
+      <div class="card-title-row"><i class="ti ti-info-circle"></i><span class="card-title">What is Infinite Banking (IBC)?</span></div>
+      <div class="card-body">Infinite Banking means using a special life insurance policy (called <b>whole life</b>) as your own personal bank. When you need to buy something big, you borrow from your own policy instead of a bank — so the interest you pay goes back to you, not a stranger. In Hidden Gems Financial's own words: <b>"Infinite Banking is not a product you buy; it is a strategy you build."</b></div>
+    </div>
+
+    <div class="card searchable" data-tags="mutual-company,dividends">
+      <div class="card-title-row"><i class="ti ti-building-community"></i><span class="card-title">Mutual insurance company</span><span class="badge verified">Verified</span></div>
+      <div class="card-body">A company <b>owned by the people who buy policies</b> from it — not by outside investors. There's no stock to trade. So when the company makes extra money, it doesn't go to rich stockholders. It comes back to policyholders like you.</div>
+    </div>
+
+    <div class="card searchable" data-tags="whole-life,dividends">
+      <div class="card-title-row"><i class="ti ti-file-certificate"></i><span class="card-title">Participating whole life</span><span class="badge verified">Verified</span></div>
+      <div class="card-body">A whole life policy that gets to <b>share in the company's profits</b>. It also comes with three promises: the same payment every year, cash value that always grows, and money paid to your family when you die.</div>
+    </div>
+
+    <div class="card searchable" data-tags="dividends,mutual-company">
+      <div class="card-title-row"><i class="ti ti-chart-pie"></i><span class="card-title">Divisible surplus</span><span class="badge verified">Verified</span></div>
+      <div class="card-body">This is the extra money (profit) left over at the end of the year. Company leaders decide how much to save for a rainy day and how much to hand back to policyholders. The part handed back is what becomes your dividend. That extra money usually comes from four places:
+        <div class="term-grid">
+          <div><i class="ti ti-trending-up"></i> Investments did better than expected</div>
+          <div><i class="ti ti-heart-pulse"></i> Fewer people passed away than expected</div>
+          <div><i class="ti ti-receipt"></i> The company spent less running things than expected</div>
+          <div><i class="ti ti-door-exit"></i> Fewer people canceled their policy than expected</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card searchable" data-tags="dividends,mechanics">
+      <div class="card-title-row"><i class="ti ti-scale"></i><span class="card-title">The Contribution Principle</span><span class="badge verified">Verified</span></div>
+      <div class="card-body">The rule these companies use to split the profit fairly: each policy gets back a share that matches how much it helped create that profit. That's also why two different companies might pay your dividend a little differently if you have a loan out.</div>
+    </div>
+
+    <div class="card searchable" data-tags="dividends,mutual-company">
+      <div class="card-title-row"><i class="ti ti-percentage"></i><span class="card-title">Dividends — not a promise, and not taxed like stock</span><span class="badge verified">Verified</span></div>
+      <div class="card-body">A dividend is never a sure thing — it depends on how well the company did that year. But it's different from a stock dividend: instead of being a slice of someone else's profit, it's treated like getting back a little of the extra money you already paid in. That's why you usually don't pay tax on it. Many of these companies have paid a dividend every single year for over 100 years — through wars, the Great Depression, and the 2008 crash.</div>
+    </div>
+    </div>
+  </section>
+
+  <!-- UNIT 2 -->
+  <section class="unit" id="u2">
+    <div class="unit-head">
+      <div class="icon-badge"><i class="ti ti-books"></i></div>
+      <div><div class="unit-num">Unit 2</div><div class="unit-title">Becoming Your Own Banker</div></div>
+      <i class="ti ti-chevron-down chevron"></i>
+    </div>
+    <div class="unit-body">
+    <p class="unit-desc">Simple stories from R. Nelson Nash's book that explain why this whole idea works. Told in our own words — no purchase links here.</p>
+
+    <div class="card searchable illus-card" data-tags="whole-life,principles">
+      <div class="illus">
+        <svg viewBox="0 0 100 76" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="30" width="84" height="40" rx="3" fill="#fff"/>
+          <rect x="8" y="30" width="84" height="10" fill="var(--accent)"/>
+          <rect x="8" y="20" width="84" height="10" fill="#e85555" rx="2"/>
+          <rect x="20" y="45" width="14" height="18" fill="var(--surface-2)"/>
+          <rect x="40" y="45" width="14" height="18" fill="var(--surface-2)"/>
+          <rect x="60" y="45" width="14" height="18" fill="var(--surface-2)"/>
+          <circle cx="27" cy="54" r="3" fill="var(--gold)"/>
+          <circle cx="47" cy="54" r="3" fill="var(--gold)"/>
+          <circle cx="67" cy="54" r="3" fill="var(--gold)"/>
+          <rect x="44" y="8" width="12" height="12" fill="#e85555" rx="2"/>
+          <path d="M50 8 L44 2 L56 2 Z" fill="#e85555"/>
+        </svg>
+      </div>
+      <div class="body-col">
+        <div class="card-title-row"><i class="ti ti-building-store"></i><span class="card-title">The grocery store story</span><span class="badge verified">Verified</span></div>
+        <div class="card-body">Picture your family owns a grocery store, and you shop there too. If your family sneaks food out the back door without paying, they're stealing from their own store! The store only makes money if everyone — even family — pays at the front register. A funded policy works the same way. Paying your policy back isn't just a rule to follow — it's what keeps your own little bank healthy and growing. Skip paying it back, and it's like sneaking food out the back door of your own store.</div>
+      </div>
+    </div>
+
+    <div class="card searchable illus-card" data-tags="principles,budgeting">
+      <div class="illus">
+        <svg viewBox="0 0 100 76" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 40 L70 40 L64 32 M70 40 L64 48" stroke="#e85555" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="10" y="26" font-size="9" fill="#e85555" font-family="-apple-system,sans-serif" font-weight="700">345 mph headwind</text>
+          <path d="M20 60 L14 60 8 55 8 65 14 60" fill="var(--accent)"/>
+          <rect x="14" y="57" width="26" height="6" rx="3" fill="var(--accent)"/>
+          <path d="M30 75 L60 75 66 68 M60 75 L66 82" stroke="#58cc02" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(0,-15)"/>
+        </svg>
+      </div>
+      <div class="body-col">
+        <div class="card-title-row"><i class="ti ti-wind"></i><span class="card-title">The headwind / tailwind problem</span><span class="badge verified">Verified</span></div>
+        <div class="card-body">Nash figured that most families send about a third of every extra dollar toward interest — on cars, houses, and credit cards — while saving very little. He compares this to flying a plane straight into a strong headwind: you can't win by just gunning the engine harder (saving a tiny bit more). The bigger win is changing the wind itself — taking control of your own money system — and turning that headwind into a tailwind pushing you forward.</div>
+      </div>
+    </div>
+
+    <div class="card searchable illus-card" data-tags="whole-life,mutual-company">
+      <div class="illus">
+        <svg viewBox="0 0 100 76" xmlns="http://www.w3.org/2000/svg">
+          <rect x="30" y="26" width="40" height="44" fill="var(--surface-2)"/>
+          <rect x="36" y="10" width="8" height="20" fill="var(--surface-2)"/>
+          <rect x="56" y="4" width="8" height="26" fill="var(--surface-2)"/>
+          <path d="M60 4 C 66 -4, 76 4, 70 10" stroke="var(--gold)" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M40 10 C 46 2, 56 10, 50 16" stroke="var(--gold)" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <rect x="38" y="40" width="8" height="10" fill="#fff"/>
+          <rect x="54" y="40" width="8" height="10" fill="#fff"/>
+          <rect x="46" y="56" width="8" height="14" fill="#fff"/>
+        </svg>
+      </div>
+      <div class="body-col">
+        <div class="card-title-row"><i class="ti ti-building-factory-2"></i><span class="card-title">The shortcut to having your own bank</span><span class="badge verified">Verified</span></div>
+        <div class="card-body">Starting a real, official bank costs tens of millions of dollars and years of government paperwork — almost nobody does that. Nash compares it to a paper mill: instead of building a whole new power plant, they burn their own leftover wood scraps to make electricity, then plug straight into the power lines that already exist. A whole life policy lets you do the same thing — plug into a banking system that's already been running for 200 years, without ever starting a real bank.</div>
+      </div>
+    </div>
+
+    <div class="card searchable illus-card" data-tags="loans,mechanics">
+      <div class="illus">
+        <svg viewBox="0 0 100 76" xmlns="http://www.w3.org/2000/svg">
+          <rect x="20" y="10" width="60" height="14" rx="4" fill="var(--accent)"/>
+          <text x="50" y="20" text-anchor="middle" font-size="9" fill="#fff" font-weight="700" font-family="-apple-system,sans-serif">Owner</text>
+          <rect x="24" y="32" width="52" height="12" rx="4" fill="var(--surface-2)"/>
+          <text x="50" y="41" text-anchor="middle" font-size="8" fill="var(--text-secondary)" font-family="-apple-system,sans-serif">Other borrowers</text>
+          <rect x="28" y="52" width="44" height="10" rx="4" fill="var(--surface-2)"/>
+          <text x="50" y="60" text-anchor="middle" font-size="7" fill="var(--text-secondary)" font-family="-apple-system,sans-serif">Wait in line</text>
+        </svg>
+      </div>
+      <div class="body-col">
+        <div class="card-title-row"><i class="ti ti-crown"></i><span class="card-title">You always get first pick of your own money</span><span class="badge verified">Verified</span></div>
+        <div class="card-body">In your policy, you are called the <b>Owner</b>. That means you get first pick of any money that can be borrowed from it — up to 100% of what it's worth — before anyone else. In plain words: nobody else's loan ever gets in the way of you using your own cash value.</div>
+      </div>
+    </div>
+
+    <div class="card searchable" data-tags="mutual-company,boli">
+      <div class="card-title-row"><i class="ti ti-building-bank"></i><span class="card-title">Why starting a real bank is so much harder</span><span class="badge verified">Verified</span></div>
+      <div class="card-body">A real bank can only lend out money that people put in — it can't lend money it doesn't have. If too many people stop paying back their loans, the bank can run out of money fast and collapse. That really happened to a bank in Texas back in the 1980s. A well-built whole life policy doesn't work that way. Your promises are written into your own contract — they don't depend on other people trusting the same bank.</div>
+    </div>
+    </div>
+  </section>
+
+  <!-- UNIT 3 -->
+  <section class="unit" id="u3">
+    <div class="unit-head">
+      <div class="icon-badge"><i class="ti ti-diamond"></i></div>
+      <div><div class="unit-num">Unit 3</div><div class="unit-title">The Hidden Gems Method</div></div>
+      <i class="ti ti-chevron-down chevron"></i>
+    </div>
+    <div class="unit-body">
+    <p class="unit-desc">Wayne's own steps for going from "curious" to "all set up" — straight from Hidden Gems Financial's own materials.</p>
+
+    <div class="card searchable" data-tags="foundations,applications">
+      <div class="card-title-row"><i class="ti ti-route"></i><span class="card-title">6 steps to build your own IBC plan</span><span class="badge source">Company material</span></div>
+      <div class="card-body">
+        <div class="step-grid">
+          <div><div class="num">1</div><br>Learn the basics</div>
+          <div><div class="num">2</div><br>Look at your cash flow</div>
+          <div><div class="num">3</div><br>Build your own plan</div>
+          <div><div class="num">4</div><br>Set up your policy</div>
+          <div><div class="num">5</div><br>Let it grow with dividends</div>
+          <div><div class="num">6</div><br>Check it and adjust it</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card searchable" data-tags="loans,dividends,applications">
+      <div class="card-title-row"><i class="ti ti-building-bank"></i><span class="card-title">How to be your own bank, in six ideas</span><span class="badge source">Company material</span></div>
+      <div class="card-body">
+        <div class="term-grid">
+          <div><b>Get a plan</b> — build a plan so your money grows while you can still use the same dollar more than once.</div>
+          <div><b>Grow your money</b> — it earns dividends, the same way whole life policies have for over 100 years.</div>
+          <div><b>Get cash when you need it</b> — usually in under 30 days, with no fees, and the policy keeps growing.</div>
+          <div><b>Use it</b> — for a car, paying off debt, or a business, while your cash value keeps working for you.</div>
+          <div><b>You're the banker</b> — you decide when and how much to pay back, so you can use the money again later.</div>
+          <div><b>Think differently</b> — you already spend money every day; now you pay yourself first, on purpose.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card searchable" data-tags="budgeting,debt,applications">
+      <div class="card-title-row"><i class="ti ti-stairs-up"></i><span class="card-title">3 steps from debt to wealth</span><span class="badge source">Company material</span></div>
+      <div class="card-body">
+        <b>Step 1 — Snowball:</b> list your debts from smallest to biggest. Pay extra on the smallest one first while paying the minimum on the rest. Once it's gone, add that payment to the next debt. This helps you feel like you're winning early.<br><br>
+        <b>Step 2 — Avalanche:</b> list your debts from the highest interest rate to the lowest. Put extra money toward the highest-rate debt first. This saves you the most money over time.<br><br>
+        <b>Step 3 — Infinite Banking:</b> once your debt is under control, the extra money becomes your own money-making machine — a policy you can borrow from, then pay back with interest that comes back to you. Most people never make it to step 3. That's the step this guide is built to get you to.
+      </div>
+    </div>
+
+    <div class="card searchable" data-tags="budgeting,debt,who-its-for">
+      <div class="card-title-row"><i class="ti ti-scale"></i><span class="card-title">Things that help you vs. things that hurt you</span><span class="badge source">Company material</span></div>
+      <div class="card-body">
+        <div class="fit-grid">
+          <div class="good-col">
+            <div class="col-head">Puts money in your pocket</div>
+            <div class="fit-item">A cash value life insurance policy (your IBC foundation)</div>
+            <div class="fit-item">A rental home that pays you money every month</div>
+            <div class="fit-item">Stocks, bonds, or index funds</div>
+            <div class="fit-item">A business that makes money</div>
+          </div>
+          <div class="warn-col">
+            <div class="col-head">Takes money away</div>
+            <div class="fit-item">Credit card debt with high interest</div>
+            <div class="fit-item">Fancy things that lose value fast</div>
+            <div class="fit-item">A house or car that costs more than you can really afford</div>
+            <div class="fit-item">Spending on credit instead of cash you actually have</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card searchable" data-tags="budgeting,policy-anatomy">
+      <div class="card-title-row"><i class="ti ti-percentage"></i><span class="card-title">Where the policy fits in your monthly budget</span><span class="badge source">Company material</span></div>
+      <div class="card-body">One simple way to plan your month, giving every dollar a job before you spend it: Housing 25–35%, Food 5–15%, Getting around (car, gas) 10–15%, Insurance 10–25%, and Saving / paying off debt / building wealth (this includes your policy payment) at least 15–20% — going up as your other debt gets paid off.</div>
+    </div>
+    </div>
+  </section>
+
+  <!-- UNIT 4 -->
+  <section class="unit" id="u4">
+    <div class="unit-head">
+      <div class="icon-badge"><i class="ti ti-file-description"></i></div>
+      <div><div class="unit-num">Unit 4</div><div class="unit-title">Policy Anatomy</div></div>
+      <i class="ti ti-chevron-down chevron"></i>
+    </div>
+    <div class="unit-body">
+    <p class="unit-desc">The pieces that make up your policy.</p>
+
+    <div class="card searchable" data-tags="policy-anatomy,budgeting">
+      <div class="card-title-row"><i class="ti ti-cash"></i><span class="card-title">Base premium</span></div>
+      <div class="card-body">The smallest payment you're allowed to make to keep your policy's promises — the death benefit and the cash value growth — going strong.</div>
+    </div>
+    <div class="card searchable" data-tags="pua,policy-anatomy,cash-value">
+      <div class="card-title-row"><i class="ti ti-stack-2"></i><span class="card-title">Paid-up additions (PUA)</span></div>
+      <div class="card-body">Extra payments you can choose to make that buy small bits of paid-off whole life insurance. This is the best way to make your cash value grow faster.</div>
+    </div>
+    <div class="card searchable" data-tags="cash-value,policy-anatomy,loans">
+      <div class="card-title-row"><i class="ti ti-wallet"></i><span class="card-title">Net cash value</span></div>
+      <div class="card-body">The amount of money in your policy that's really yours to use right now — the full cash value minus anything you still owe on a loan.</div>
+    </div>
+    <div class="card searchable" data-tags="death-benefit,policy-anatomy,legacy">
+      <div class="card-title-row"><i class="ti ti-shield"></i><span class="card-title">Death benefit</span></div>
+      <div class="card-body">The money paid to your family when you pass away — usually with no tax owed on it. It gives your family instant money, instead of them having to wait years for savings to build up.</div>
+    </div>
+    <div class="card searchable" data-tags="policy-anatomy,whole-life">
+      <div class="card-title-row"><i class="ti ti-transfer"></i><span class="card-title">1035 exchange</span><span class="badge verified">Verified</span></div>
+      <div class="card-body">A way to trade your <b>whole life insurance or annuity contract</b> for a new one without paying tax — not just the cash value, the whole thing — as long as the same person owns both. This lets you switch to a better policy without a tax bill.</div>
+    </div>
+    </div>
+  </section>
+
+  <!-- UNIT 5 -->
+  <section class="unit" id="u5">
+    <div class="unit-head">
+      <div class="icon-badge"><i class="ti ti-arrows-shuffle"></i></div>
+      <div><div class="unit-num">Unit 5</div><div class="unit-title">Core Mechanics</div></div>
+      <i class="ti ti-chevron-down chevron"></i>
+    </div>
+    <div class="unit-body">
+    <p class="unit-desc">How money moves in and out of your policy.</p>
+
+    <div class="card searchable" data-tags="loans,mechanics,cash-value">
+      <div class="card-title-row"><i class="ti ti-arrows-diff"></i><span class="card-title">Borrow vs. withdrawal</span></div>
+      <div class="card-body">A <b>loan</b> means you borrow money using your cash value as collateral — your cash value keeps earning dividends the whole time, and you pay the loan back whenever you want. A <b>withdrawal</b> actually takes money out of your cash value for good, so it earns less going forward (and it might shrink the death benefit too).</div>
+    </div>
+    <div class="card searchable" data-tags="loans,dividends,mechanics">
+      <div class="card-title-row"><i class="ti ti-percentage"></i><span class="card-title">Interest vs. dividends</span></div>
+      <div class="card-body"><b>Interest</b> is what you pay the company when you borrow from your policy. <b>Dividends</b> are what the company pays you for being a policyholder. In a healthy policy, both can happen at the same time — you pay interest on a loan and earn dividends at once.</div>
+    </div>
+    <div class="card searchable" data-tags="recognition,dividends,loans">
+      <div class="card-title-row"><i class="ti ti-link-off"></i><span class="card-title">Non-direct recognition</span></div>
+      <div class="card-body">The company pays you dividends on your <b>whole</b> cash value, whether or not you have a loan out. The loan and the dividend aren't connected to each other.</div>
+    </div>
+    <div class="card searchable" data-tags="recognition,dividends,loans">
+      <div class="card-title-row"><i class="ti ti-link"></i><span class="card-title">Direct recognition</span></div>
+      <div class="card-body">The company changes the dividend on the <b>part of your cash value you've borrowed against</b>, often paying it a different rate. Neither way is "better" — they're just two different ways of keeping things fair between people who borrow and people who don't.</div>
+    </div>
+    </div>
+  </section>
+
+  <!-- UNIT 6 -->
+  <section class="unit" id="u6">
+    <div class="unit-head">
+      <div class="icon-badge"><i class="ti ti-bulb"></i></div>
+      <div><div class="unit-num">Unit 6</div><div class="unit-title">The Principles Behind It</div></div>
+      <i class="ti ti-chevron-down chevron"></i>
+    </div>
+    <div class="unit-body">
+    <p class="unit-desc">Big ideas from R. Nelson Nash and other IBC teachers that explain <i>why</i> this works, not just how.</p>
+
+    <div class="card searchable" data-tags="principles,opportunity-cost">
+      <div class="card-title-row"><i class="ti ti-scale-outline"></i><span class="card-title">Opportunity cost</span><span class="badge verified">Verified</span></div>
+      <div class="card-body">You pay to finance everything you buy — either you pay interest to someone else, or you give up interest you could've earned by keeping your own money working. Paying with cash is never really "free"; you just gave up what that money could have done for you somewhere else.
+        <div style="background:#fff;border-radius:10px;padding:10px 12px;margin-top:8px;">
+          <b>The broken window story:</b> a boy breaks a shop window. Everyone says "good — now the window fixer gets paid!" That's what you <i>can</i> see. What you <i>can't</i> see: the shopkeeper would've spent that money on new shoes instead. Nothing new was made — the money just went somewhere else, and now the shopkeeper is missing a window too. (This story is almost 200 years old and people still use it to explain opportunity cost.)
+        </div>
+      </div>
+    </div>
+
+    <div class="card searchable" data-tags="principles">
+      <div class="card-title-row"><i class="ti ti-crown"></i><span class="card-title">The Golden Rule</span></div>
+      <div class="card-body">"Whoever has the gold makes the rules." Whoever controls the money in a deal controls the terms. IBC is about putting yourself in that spot for your own money, instead of a bank.</div>
+    </div>
+    <div class="card searchable" data-tags="principles">
+      <div class="card-title-row"><i class="ti ti-mask"></i><span class="card-title">Willie Sutton's Law</span></div>
+      <div class="card-body">Named after a famous bank robber. When asked why he robbed banks, he said, "because that's where the money is." Nash's point: go to where the money and the banking actually happen.</div>
+    </div>
+    <div class="card searchable" data-tags="principles,budgeting">
+      <div class="card-title-row"><i class="ti ti-trending-up"></i><span class="card-title">Parkinson's Law</span></div>
+      <div class="card-body">Spending grows to match how much you earn. The more money you make, the more you tend to spend — unless you build something on purpose (like a funded policy) that grabs the extra money first.</div>
+    </div>
+    <div class="card searchable" data-tags="principles,retirement">
+      <div class="card-title-row"><i class="ti ti-flag"></i><span class="card-title">The Arrival Syndrome</span></div>
+      <div class="card-body">The mistaken idea that once you reach a goal (paying off your house, hitting a savings number), you can stop thinking carefully about money. IBC treats banking as something you always do — not a finish line.</div>
+    </div>
+    <div class="card searchable" data-tags="principles,cost-of-acquisition,red-flag">
+      <div class="card-title-row"><i class="ti ti-clock-dollar"></i><span class="card-title">Cost of getting started</span></div>
+      <div class="card-body">Every system like this has a start-up cost. For a policy, it takes about 13 years to fully cover that start-up cost — which is close to how long it takes a real bank to break even on opening a new branch.</div>
+    </div>
+    <div class="card searchable" data-tags="principles,opportunity-cost">
+      <div class="card-title-row"><i class="ti ti-recycle"></i><span class="card-title">Use it or lose it</span></div>
+      <div class="card-body">Your own money has a cost too, even sitting still — just like borrowed money does. Nash's point: thinking your own money is "free" just because you already have it is the same mistake as ignoring opportunity cost.</div>
+    </div>
+    <div class="card searchable" data-tags="principles,dividends,mutual-company">
+      <div class="card-title-row"><i class="ti ti-users"></i><span class="card-title">The four roles in any money system</span></div>
+      <div class="card-body">Nash's way of showing who earns what: the <b>Stockholder</b> earns dividends, the <b>Saver</b> earns interest, the <b>Worker</b> earns a paycheck, and the <b>Borrower</b> pays interest. A person with a mutual whole life policy is unusual — they can be the dividend-earner <i>and</i> the borrower at the same time.</div>
+    </div>
+    <div class="card searchable" data-tags="principles,who-its-for">
+      <div class="card-title-row"><i class="ti ti-dice-6"></i><span class="card-title">Smart risk vs. risky risk</span></div>
+      <div class="card-body">Smart risk means only risking money you can afford to lose, after your safety net (guaranteed cash value, protection) is already in place. Risky risk means gambling with the very money that was supposed to protect you.</div>
+    </div>
+    <div class="card searchable" data-tags="death-benefit,legacy,principles">
+      <div class="card-title-row"><i class="ti ti-diamond"></i><span class="card-title">Get your net worth now, don't wait for it</span></div>
+      <div class="card-body">A death benefit gives your family a big chunk of money right away. Instead of spending decades slowly saving up to that number, the policy creates it instantly.</div>
+    </div>
+    <div class="card searchable" data-tags="cash-value,principles,applications">
+      <div class="card-title-row"><i class="ti ti-droplet"></i><span class="card-title">Using your money beats just stacking it up</span></div>
+      <div class="card-body">A good policy's real job is to protect your money, help it grow, and let you use and enjoy it today <i>and</i> tomorrow — instead of locking it away untouched for decades.</div>
+    </div>
+    </div>
+  </section>
+
+  <!-- UNIT 7 -->
+  <section class="unit" id="u7">
+    <div class="unit-head">
+      <div class="icon-badge"><i class="ti ti-alert-triangle"></i></div>
+      <div><div class="unit-num">Unit 7</div><div class="unit-title">What It's Not</div></div>
+      <i class="ti ti-chevron-down chevron"></i>
+    </div>
+    <div class="unit-body">
+    <p class="unit-desc">Things people mix up with IBC — or try to swap in — that just don't do the same job.</p>
+
+    <div class="card searchable" data-tags="iul,comparison,whole-life">
+      <div class="card-title-row"><i class="ti ti-arrows-left-right"></i><span class="card-title">Whole life vs. IUL — four big promises</span><span class="badge verified">Verified</span></div>
+      <div class="card-body">
+        <table class="compare">
+          <tr><th>What</th><th>Whole Life</th><th>IUL</th></tr>
+          <tr><td>Payment</td><td class="good">Same every time, promised</td><td class="warn">Can change</td></tr>
+          <tr><td>Cost of insurance</td><td class="good">Stays the same forever</td><td class="warn">Goes up as you age</td></tr>
+          <tr><td>Cash value growth</td><td class="good">Promised in the contract</td><td class="warn">Not promised — can be $0</td></tr>
+          <tr><td>Who can change the deal later</td><td class="good">Nobody — it's a contract</td><td class="warn">The insurance company can</td></tr>
+        </table>
+        <div style="margin-top:8px;">That last row is the whole point. Your own "bank" has to be something nobody else can change the rules on after you've put your money in. With IUL, the company can change some of the numbers later. With whole life, they can't — it's locked in.</div>
+      </div>
+    </div>
+
+    <div class="card searchable" data-tags="iul,comparison">
+      <div class="card-title-row"><i class="ti ti-percentage"></i><span class="card-title">Cap, floor, and participation rate</span></div>
+      <div class="card-body">These are IUL words: a <b>cap</b> is the most you can earn, no matter how well the stock market does. A <b>floor</b> is how low your earnings can go (often 0%, so at least you don't lose money). A <b>participation rate</b> is how much of the market's gain you actually get. None of these numbers are locked in — the company can change them.</div>
+    </div>
+    <div class="card searchable" data-tags="iul,comparison">
+      <div class="card-title-row"><i class="ti ti-calendar-repeat"></i><span class="card-title">Annual renewable term (ART)</span></div>
+      <div class="card-body">This is the type of insurance cost hiding inside most IUL and universal life policies. The price goes up every single year as you get older, slowly eating away at your cash value just to keep your coverage going.</div>
+    </div>
+    <div class="card searchable" data-tags="iul,comparison,red-flag">
+      <div class="card-title-row"><i class="ti ti-file-report"></i><span class="card-title">"Promised" vs. "hoped-for" numbers</span></div>
+      <div class="card-body">Every IUL paper shows two sets of numbers: one that's promised (often showing your policy running out of money early) and one that's just hopeful and not promised at all. The big gap between those two numbers is a risk whole life doesn't have.</div>
+    </div>
+
+    <div class="card searchable" data-tags="boli,mutual-company,whole-life">
+      <div class="card-title-row"><i class="ti ti-building-bank"></i><span class="card-title">Why real banks buy whole life too</span><span class="badge verified">Verified</span></div>
+      <div class="card-body">Banks themselves buy billions of dollars of whole life insurance to hold onto as a safe, steady asset — it's used to help pay for things like employee benefits. Regulators trust it because insurance companies are careful, steady lenders, not risky like banks can be. If whole life is safe enough for an actual bank to use, that's a good sign it's the right tool for building your own.</div>
+    </div>
+
+    <div class="card fine-print searchable" data-tags="red-flag,iul,comparison">
+      <div class="card-title-row"><i class="ti ti-alert-triangle"></i><span class="card-title">Watch out for tricky words</span><span class="badge verified">Verified</span></div>
+      <div class="card-body">"Permanent life insurance" and "cash value life insurance" are real terms — but they're umbrella words that cover four different products, only one of which is whole life. A policy can be sold using those broad words without ever saying "whole life" or "guaranteed," so a buyer might think they're getting promises they're not actually getting. State regulators have warned people about exactly this: buying a "permanent" policy expecting a locked-in payment and guaranteed growth, then later finding out costs went up or the policy is running out of money. If someone sells you a policy for infinite banking, make sure they say the word "whole life" and use the word "guaranteed" — not just "permanent" or "cash value."</div>
+    </div>
+
+    <div class="card searchable">
+      <div class="card-title-row"><i class="ti ti-bulb"></i><span class="card-title">Try it: spot the red flag</span></div>
+      <div class="card-body">
+        Someone tells you a policy is "permanent cash value life insurance" for infinite banking, but never says "whole life" or "guaranteed." What should you ask?
+        <div class="quiz-option">Nothing — "permanent" already means it's guaranteed</div>
+        <div class="quiz-option correct"><i class="ti ti-circle-check"></i> "Is this whole life? Are the payment, the cost, and the cash value growth all guaranteed?"</div>
+        <div class="quiz-option">Only ask how much money my family gets when I die</div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- UNIT 8 -->
+  <section class="unit" id="u8">
+    <div class="unit-head">
+      <div class="icon-badge"><i class="ti ti-lock"></i></div>
+      <div><div class="unit-num">Unit 8</div><div class="unit-title">Protect the Structure</div></div>
+      <i class="ti ti-chevron-down chevron"></i>
+    </div>
+    <div class="unit-body">
+    <p class="unit-desc">Rules that protect your tax benefits and protect your family if you can't pay anymore.</p>
+
+    <div class="card searchable" data-tags="mec,riders,policy-anatomy">
+      <div class="card-title-row"><i class="ti ti-shield-x"></i><span class="card-title">MEC (putting in money too fast)</span><span class="badge verified">Verified</span></div>
+      <div class="card-body">If you put money into a policy too quickly, it turns into something called a <b>MEC</b>. Your family still gets the death benefit tax-free. But now, if you borrow or take money out early, you have to pay tax on it (and maybe an extra penalty if you're under 59½).</div>
+    </div>
+    <div class="card searchable" data-tags="riders,death-benefit,policy-anatomy">
+      <div class="card-title-row"><i class="ti ti-calendar-time"></i><span class="card-title">Term rider</span></div>
+      <div class="card-body">Extra, temporary insurance added on top of your whole life policy. It boosts the money your family would get, cheaply, in the early years while your policy's cash value is still building up.</div>
+    </div>
+    <div class="card searchable" data-tags="riders,who-its-for">
+      <div class="card-title-row"><i class="ti ti-hand-stop"></i><span class="card-title">Waiver of premium</span></div>
+      <div class="card-body">A add-on that keeps your policy fully paid for you — no payments needed — if you become too disabled to work and pay.</div>
+    </div>
+    <div class="card searchable" data-tags="riders,death-benefit">
+      <div class="card-title-row"><i class="ti ti-heartbeat"></i><span class="card-title">Living benefits</span></div>
+      <div class="card-body">Add-ons that let you use some of your death benefit money while you're still alive, if you get seriously sick.</div>
+    </div>
+    <div class="card searchable" data-tags="riders,death-benefit,cash-value">
+      <div class="card-title-row"><i class="ti ti-arrows-split"></i><span class="card-title">Two ways to stop paying (often mixed up)</span></div>
+      <div class="card-body"><b>Reduced paid-up:</b> your death benefit gets smaller forever, but the policy keeps going for your whole life, still earning dividends and growing — and you never pay again. <b>Extended term:</b> your family still gets the full death benefit, but only for a set number of years, and your cash value stops growing.</div>
+    </div>
+
+    <div class="card fine-print searchable" data-tags="loans,fine-print,mechanics">
+      <div class="card-title-row"><i class="ti ti-alert-triangle"></i><span class="card-title">Fine print: borrowing from your policy</span></div>
+      <div class="card-body">If you don't pay back the interest on a loan, it gets added to what you owe, and it shrinks the death benefit. If your loan ever grows bigger than your cash value, your whole policy could end — and the loan might even become taxable.</div>
+    </div>
+
+    <div class="card searchable" data-tags="legacy,death-benefit,who-its-for">
+      <div class="card-title-row"><i class="ti ti-users-group"></i><span class="card-title">Skipping the long court process (probate)</span></div>
+      <div class="card-body">When you name a real person as your beneficiary, the death benefit usually skips a long court process called probate completely — it goes to your family faster and more privately than most other things you own.</div>
+    </div>
+    </div>
+  </section>
+
+  <!-- UNIT 9 -->
+  <section class="unit" id="u9">
+    <div class="unit-head">
+      <div class="icon-badge"><i class="ti ti-building-arch"></i></div>
+      <div><div class="unit-num">Unit 9</div><div class="unit-title">Retirement Accounts &amp; OPM</div></div>
+      <i class="ti ti-chevron-down chevron"></i>
+    </div>
+    <div class="unit-body">
+    <p class="unit-desc">How a policy compares to (and can team up with) accounts like a 401(k) or IRA.</p>
+
+    <div class="card searchable" data-tags="retirement,who-its-for">
+      <div class="card-title-row"><i class="ti ti-calendar-due"></i><span class="card-title">RMD — the government makes you take money out</span><span class="badge verified">Verified</span></div>
+      <div class="card-body">Starting at age 73 or 75 (it depends on your birth year), the government makes you start pulling money out of most retirement accounts, whether you need it or not — and you pay regular tax on it. A Roth IRA doesn't have this rule for the original owner.</div>
+    </div>
+    <div class="card searchable" data-tags="retirement">
+      <div class="card-title-row"><i class="ti ti-refresh"></i><span class="card-title">60-day rule</span></div>
+      <div class="card-body">If you pull money straight out of a retirement account, you have 60 days to put it back into a similar account — or the government treats it as regular taxable income.</div>
+    </div>
+    <div class="card searchable" data-tags="retirement,loans,applications">
+      <div class="card-title-row"><i class="ti ti-cash-banknote"></i><span class="card-title">OPM — using other people's money</span></div>
+      <div class="card-body">Instead of always selling your own investments to pay for something, you borrow from your policy (or elsewhere) so your investments can keep growing untouched.</div>
+    </div>
+    </div>
+  </section>
+
+  <!-- UNIT 10 -->
+  <section class="unit" id="u10">
+    <div class="unit-head">
+      <div class="icon-badge"><i class="ti ti-target-arrow"></i></div>
+      <div><div class="unit-num">Unit 10</div><div class="unit-title">Apply It in Real Life</div></div>
+      <i class="ti ti-chevron-down chevron"></i>
+    </div>
+    <div class="unit-body">
+    <p class="unit-desc">Real examples of how this actually gets used.</p>
+
+    <div class="card searchable" data-tags="applications,loans,debt">
+      <div class="card-title-row"><i class="ti ti-credit-card"></i><span class="card-title">Paying off a credit card the smart way</span></div>
+      <div class="card-body">Say you owe $4,000 on a credit card at 22% interest. A policy loan might only cost 7–8% interest. Paying off the card with a policy loan cuts your interest cost roughly in half — and the interest you do pay goes back into your own policy, not the credit card company.</div>
+    </div>
+    <div class="card searchable" data-tags="applications,loans">
+      <div class="card-title-row"><i class="ti ti-car"></i><span class="card-title">Getting a better deal on a car</span></div>
+      <div class="card-body">Say a car costs $30,000 at 9% interest from the dealer. Using your cash value to pay for it (or lower the rate) sends that interest back to your own policy instead of the dealer's lender — while your cash value keeps earning dividends the whole time.</div>
+    </div>
+    <div class="card searchable" data-tags="budgeting,debt,applications">
+      <div class="card-title-row"><i class="ti ti-target"></i><span class="card-title">Setting a clear goal to pay off debt</span><span class="badge source">Company material</span></div>
+      <div class="card-body">An example from Hidden Gems Financial's own guide: pay off $8,000 in credit card debt, by paying $700 extra a month, by cutting $350 from spending and earning $350 more from a side job, so you're debt-free in 12 months. A clear goal like this works. A vague goal like "save more money" usually doesn't.</div>
+    </div>
+    </div>
+  </section>
+
+  <!-- UNIT 11 -->
+  <section class="unit" id="u11">
+    <div class="unit-head">
+      <div class="icon-badge"><i class="ti ti-users"></i></div>
+      <div><div class="unit-num">Unit 11</div><div class="unit-title">Who It's For</div></div>
+      <i class="ti ti-chevron-down chevron"></i>
+    </div>
+    <div class="unit-body">
+    <p class="unit-desc">Who this really helps — and an honest look at who it doesn't.</p>
+
+    <div class="card searchable" data-tags="who-its-for,debt,budgeting">
+      <div class="card-title-row"><i class="ti ti-stairs-up"></i><span class="card-title">People ready to go past "just getting out of debt"</span><span class="badge source">Company material</span></div>
+      <div class="card-body">Most people stop once their debt is paid off. IBC is for someone who already has (or is building) a safety net, and now wants their extra money to start working <i>for</i> them, instead of just no longer working against them.</div>
+    </div>
+    <div class="card searchable" data-tags="who-its-for,opportunity-cost">
+      <div class="card-title-row"><i class="ti ti-wind"></i><span class="card-title">Anyone tired of paying interest to everyone else</span></div>
+      <div class="card-body">If a big chunk of your money already goes toward interest on cars, cards, or a house, IBC is a way to send that same money back to yourself instead — you were paying it either way.</div>
+    </div>
+    <div class="card searchable" data-tags="who-its-for,loans">
+      <div class="card-title-row"><i class="ti ti-building-store"></i><span class="card-title">Small business owners</span></div>
+      <div class="card-body">People who want quick, promised access to money for supplies, equipment, or slow months — without waiting on a bank to say yes.</div>
+    </div>
+    <div class="card searchable" data-tags="who-its-for,legacy,death-benefit">
+      <div class="card-title-row"><i class="ti ti-users-group"></i><span class="card-title">Families who care about more than just retirement</span></div>
+      <div class="card-body">People who want one guaranteed part of their money plan that doesn't depend on the stock market, and who want money to reach their kids fast and privately, without a long court process.</div>
+    </div>
+
+    <div class="card fine-print searchable" data-tags="who-its-for,red-flag,cost-of-acquisition">
+      <div class="card-title-row"><i class="ti ti-alert-triangle"></i><span class="card-title">Who it's probably not for</span></div>
+      <div class="card-body">Someone who doesn't have steady extra money each month to put into a policy — starting one and then stopping early can cost you (see Unit 6, Cost of getting started). Also, anyone chasing the fastest possible growth: whole life is meant to be slow, safe, and boring — not a way to get rich quick. And policy design really matters, so this should always be a conversation with someone qualified, not a do-it-yourself decision.</div>
+    </div>
+    </div>
+  </section>
+
+  <!-- UNIT 12 : FAQ -->
+  <section class="unit" id="u12">
+    <div class="unit-head">
+      <div class="icon-badge"><i class="ti ti-message-question"></i></div>
+      <div><div class="unit-num">Unit 12</div><div class="unit-title">Common Questions</div></div>
+      <i class="ti ti-chevron-down chevron"></i>
+    </div>
+    <div class="unit-body">
+    <p class="unit-desc">Real questions people actually ask on their first call — pulled from real conversations, with names left out.</p>
+
+    <div class="card searchable" data-tags="dividends,comparison,stock-market">
+      <div class="card-title-row"><i class="ti ti-help-circle"></i><span class="card-title">Why not just put my money in the stock market instead?</span></div>
+      <div class="card-body">Stocks can grow faster some years, but they go up and down, and borrowing against them can get risky — if the value drops, a lender can force you to sell at the worst possible time. A whole life policy grows slower but steadier, and nobody can force you to sell or repay on their schedule.</div>
+    </div>
+
+    <div class="card searchable" data-tags="policy-anatomy,death-benefit,applications">
+      <div class="card-title-row"><i class="ti ti-help-circle"></i><span class="card-title">Why not just buy cheap term insurance and invest the rest myself?</span></div>
+      <div class="card-body">Term insurance is cheaper and pays your family if you die, but it never builds any cash value — when the term ends, you have nothing left from it. A whole life policy costs more, but part of every payment builds real cash you can use while you're still alive.</div>
+    </div>
+
+    <div class="card searchable" data-tags="policy-anatomy,cost-of-acquisition,pua,iul,comparison">
+      <div class="card-title-row"><i class="ti ti-help-circle"></i><span class="card-title">Isn't most of my first payment just going to fees?</span><span class="badge verified">Verified</span></div>
+      <div class="card-body">Not with real whole life. The cost of insurance is a small, level slice of every payment — the same amount on day one as it is 30 years later, so it never quietly grows into a bigger piece of your payment. Most well-built whole life policies give you access to a strong majority of what you've paid in within about 30 days of that very first payment. And your cash value doesn't just "catch up" later — it starts strong and gets a little stronger every single year, since nothing is eating into it from a rising insurance cost.<br><br>That "small at first, catches up later" pattern is actually how <b>IUL</b> works, not whole life. IUL policies charge a separate, rising cost of insurance <i>and</i> a steep surrender charge, so the cash you could actually walk away with in year one can be a small fraction of what you paid in — sometimes barely a dime on the dollar. Whole life doesn't work that way.</div>
+    </div>
+
+    <div class="card searchable" data-tags="loans,dividends,mechanics">
+      <div class="card-title-row"><i class="ti ti-help-circle"></i><span class="card-title">If my loan costs more than my dividend pays, isn't that a bad deal?</span></div>
+      <div class="card-body">Sometimes the loan rate is a little higher than the dividend rate in a given year. But you're not really losing — you still get the full death benefit, the full dividend, and the money you borrowed to use somewhere else (like paying off higher-interest debt). It's usually still a smart trade even when the two numbers aren't a perfect match.</div>
+    </div>
+
+    <div class="card searchable" data-tags="loans,fine-print,mechanics">
+      <div class="card-title-row"><i class="ti ti-help-circle"></i><span class="card-title">What happens if I never pay back a loan from my policy?</span></div>
+      <div class="card-body">You're never on a set schedule to pay back a policy loan. But if you skip the interest, it gets added to what you owe. If a loan ever grows bigger than your cash value, the policy could lapse — and that can create a tax bill. Paying at least the interest each year keeps that from happening.</div>
+    </div>
+
+    <div class="card searchable" data-tags="whole-life,principles,red-flag">
+      <div class="card-title-row"><i class="ti ti-help-circle"></i><span class="card-title">This sounds too good to be true. What's the catch?</span></div>
+      <div class="card-body">The real "catch" is patience: whole life grows slowly at first and works best when you fund it consistently for years. It's not a secret loophole — it's a 200-year-old, heavily regulated product. The "magic" is really just steady compounding, plus not needing a bank's permission to use your own money.</div>
+    </div>
+
+    <div class="card searchable" data-tags="whole-life,pua,red-flag">
+      <div class="card-title-row"><i class="ti ti-help-circle"></i><span class="card-title">I've heard whole life insurance has a bad reputation. Is that fair?</span></div>
+      <div class="card-body">Some of that reputation comes from old-style policies that are mostly death benefit with very little cash value growth. A policy built on purpose for infinite banking is designed differently — extra paid-up additions are added specifically to make cash value grow much faster. The design matters as much as the product itself.</div>
+    </div>
+
+    <div class="card searchable" data-tags="iul,comparison,red-flag">
+      <div class="card-title-row"><i class="ti ti-help-circle"></i><span class="card-title">Is this the same as an IUL (Indexed Universal Life)?</span></div>
+      <div class="card-body">No — mixing these two up is one of the most common mistakes. An IUL ties your growth to the stock market with a cap on your gains, and its cost of insurance rises every year as you age. Whole life has neither problem: the cost of insurance never changes, and growth isn't tied to the market at all.</div>
+    </div>
+
+    <div class="card searchable" data-tags="loans,cash-value,applications">
+      <div class="card-title-row"><i class="ti ti-help-circle"></i><span class="card-title">How fast can I actually get my money if I need it?</span></div>
+      <div class="card-body">In most well-funded policies, a large share of your money (often 70–90%, depending on the company) is available to borrow within about 2 to 4 weeks — much faster than a lot of other assets, and nobody has to approve it but you.</div>
+    </div>
+
+    <div class="card searchable" data-tags="mutual-company,boli,dividends">
+      <div class="card-title-row"><i class="ti ti-help-circle"></i><span class="card-title">Is my money safer with an insurance company than in a bank?</span></div>
+      <div class="card-body">Insurance companies are required to hold on to far more of their money in reserve than banks are. That's a big part of why many mutual insurers have paid a dividend every single year for over 100 years — through the Great Depression, wars, and market crashes — without missing one.</div>
+    </div>
+
+    <div class="card searchable" data-tags="retirement,cost-of-acquisition,who-its-for">
+      <div class="card-title-row"><i class="ti ti-help-circle"></i><span class="card-title">I'm only a few years from retirement. Is it too late to start?</span></div>
+      <div class="card-body">It's never really "too late," but starting earlier always helps more, since it takes time to fully cover a policy's start-up cost. Even close to retirement, a policy can still give you guaranteed growth that isn't tied to the market, tax-free access to cash, and a tax-free legacy for your family — those benefits don't disappear just because retirement is close.</div>
+    </div>
+    </div>
+  </section>
+
+  <!-- UNIT 13 : RESOURCES -->
+  <section class="unit" id="u13">
+    <div class="unit-head">
+      <div class="icon-badge"><i class="ti ti-video"></i></div>
+      <div><div class="unit-num">Unit 13</div><div class="unit-title">Resources — Watch, Read &amp; Learn More</div></div>
+      <i class="ti ti-chevron-down chevron"></i>
+    </div>
+    <div class="unit-body">
+    <p class="unit-desc">Videos, movies, and books Wayne recommends if you want to go deeper. Picked by Wayne — not company material.</p>
+
+    <div class="card searchable" data-tags="resources,videos">
+      <div class="card-title-row"><i class="ti ti-brand-youtube"></i><span class="card-title">Videos to watch</span><span class="badge source">Wayne's picks</span></div>
+      <div class="card-body">
+        <div class="res-item"><i class="ti ti-brand-youtube"></i><span class="res-text">Nelson Nash Institute</span><span class="res-dur">1 hr</span><a href="https://www.youtube.com/watch?v=kv_kX5CN3tI&t=930s" target="_blank" rel="noopener">Watch</a></div>
+        <div class="res-item"><i class="ti ti-brand-youtube"></i><span class="res-text">Whole Life vs. IUL</span><span class="res-dur">1 hr</span><a href="https://youtu.be/bMj5QBxhMXw?si=nRTjvsQ6aulqWpk4" target="_blank" rel="noopener">Watch</a></div>
+        <div class="res-item"><i class="ti ti-brand-youtube"></i><span class="res-text">The Truth About BOLI</span><span class="res-dur">3 mins</span><a href="https://youtu.be/YQQ9c5vgVU4?si=oEA8f7kK-S2QZUxg" target="_blank" rel="noopener">Watch</a></div>
+        <div class="res-item"><i class="ti ti-brand-youtube"></i><span class="res-text">Whole Life vs. IUL (short)</span><span class="res-dur">7 mins</span><a href="https://youtu.be/YQQ9c5vgVU4?si=oEA8f7kK-S2QZUxg" target="_blank" rel="noopener">Watch</a></div>
+        <div class="res-item"><i class="ti ti-brand-youtube"></i><span class="res-text">Why Whole Life Outshines IUL</span><span class="res-dur">30 mins</span><a href="https://youtu.be/x2mD9vXoNqU?si=HOS3dIiwGF4gH38s" target="_blank" rel="noopener">Watch</a></div>
+        <div class="res-item"><i class="ti ti-brand-youtube"></i><span class="res-text">FFL IUL Training Reaction — Borderline Fraud</span><span class="res-dur">22 mins</span><a href="https://youtu.be/9i3MxcexTgM?si=fdSrUCaE6rOmtl2V" target="_blank" rel="noopener">Watch</a></div>
+        <div class="res-item"><i class="ti ti-brand-youtube"></i><span class="res-text">FFL IUL 101 Reaction</span><span class="res-dur">45 mins</span><a href="https://youtu.be/9i3MxcexTgM?si=fdSrUCaE6rOmtl2V" target="_blank" rel="noopener">Watch</a></div>
+        <div class="res-item"><i class="ti ti-brand-youtube"></i><span class="res-text">Wayne's IBC Training</span><span class="res-dur">31 mins</span><a href="https://youtu.be/np_Fpp0i65I?si=RGruFq36WxDgxsZ3" target="_blank" rel="noopener">Watch</a></div>
+        <div class="res-item"><i class="ti ti-brand-youtube"></i><span class="res-text">Whole Life vs. IUL Debate</span><span class="res-dur">1 hr 34 mins</span><a href="https://youtu.be/aF1qvhYnqKg?si=s67fa6bOyBFkfImT" target="_blank" rel="noopener">Watch</a></div>
+        <div class="res-item"><i class="ti ti-brand-youtube"></i><span class="res-text">IBC Overview</span><span class="res-dur">23 mins</span><a href="https://youtu.be/CQ7XxrHYaLE" target="_blank" rel="noopener">Watch</a></div>
+        <div class="res-item"><i class="ti ti-brand-youtube"></i><span class="res-text">IBC Overview (short)</span><span class="res-dur">7 mins</span><a href="https://youtu.be/ONIdxhszsH4" target="_blank" rel="noopener">Watch</a></div>
+        <div class="res-item"><i class="ti ti-brand-youtube"></i><span class="res-text">IBC &amp; Real Estate</span><span class="res-dur">11 mins</span><a href="https://youtu.be/ztPkA6rLa48" target="_blank" rel="noopener">Watch</a></div>
+        <div class="res-item"><i class="ti ti-brand-youtube"></i><span class="res-text">Naugle — Money Multiplier</span><span class="res-dur">86 mins</span><a href="https://youtu.be/0dFoRtHCUWM" target="_blank" rel="noopener">Watch</a></div>
+        <div class="res-item"><i class="ti ti-brand-youtube"></i><span class="res-text">Naugle — IBC Overview</span><span class="res-dur">23 mins</span><a href="https://youtu.be/GZTXUDjB-nc" target="_blank" rel="noopener">Watch</a></div>
+        <div class="res-item"><i class="ti ti-brand-youtube"></i><span class="res-text">Fractional Reserve Banking</span><span class="res-dur">11 mins</span><a href="https://youtu.be/E0g-UF3Zaqc?si=i3lS76AWbVN2V-Hf" target="_blank" rel="noopener">Watch</a></div>
+        <div class="res-item"><i class="ti ti-brand-youtube"></i><span class="res-text">An Attorney on IUL's</span><span class="res-dur">51 mins</span><a href="https://youtu.be/kagkyVLUnBU?si=_co4jCcYZNatNx6Y" target="_blank" rel="noopener">Watch</a></div>
+        <div class="res-item"><i class="ti ti-brand-youtube"></i><span class="res-text">Lafayette Life CEO</span><span class="res-dur">33 mins</span><a href="https://youtu.be/Bc1oTB5z_A4?si=0zPLtt7-HwzZghfY" target="_blank" rel="noopener">Watch</a></div>
+      </div>
+    </div>
+
+    <div class="card searchable" data-tags="resources,movies">
+      <div class="card-title-row"><i class="ti ti-movie"></i><span class="card-title">Movies with money lessons</span><span class="badge source">Wayne's picks</span></div>
+      <div class="card-body">
+        <div class="res-item"><i class="ti ti-movie"></i><span class="res-text">All the Money in the World</span><a href="https://www.imdb.com/title/tt5294550/" target="_blank" rel="noopener">IMDb</a></div>
+        <div class="res-item"><i class="ti ti-movie"></i><span class="res-text">The Descendants</span><a href="https://www.imdb.com/title/tt1033575/" target="_blank" rel="noopener">IMDb</a></div>
+        <div class="res-item"><i class="ti ti-movie"></i><span class="res-text">The Ultimate Gift</span><a href="https://www.imdb.com/title/tt0482629/" target="_blank" rel="noopener">IMDb</a></div>
+        <div class="res-item"><i class="ti ti-movie"></i><span class="res-text">Brewster's Millions</span><a href="https://www.imdb.com/title/tt0088850/" target="_blank" rel="noopener">IMDb</a></div>
+        <div class="res-item"><i class="ti ti-movie"></i><span class="res-text">The Laundromat</span><a href="https://www.imdb.com/title/tt5865326/" target="_blank" rel="noopener">IMDb</a></div>
+      </div>
+    </div>
+
+    <div class="card searchable" data-tags="resources,books">
+      <div class="card-title-row"><i class="ti ti-book"></i><span class="card-title">Books for further reading</span><span class="badge source">Wayne's picks</span></div>
+      <div class="card-body">
+        <div class="res-item"><i class="ti ti-book"></i><span class="res-text">Becoming Your Own Banker — R. Nelson Nash</span></div>
+        <div class="res-item"><i class="ti ti-headphones"></i><span class="res-text">Becoming Your Own Banker — audio version</span></div>
+        <div class="res-item"><i class="ti ti-book"></i><span class="res-text">The Case for IBC</span></div>
+        <div class="res-item"><i class="ti ti-book"></i><span class="res-text">Money. Wealth. Life Insurance.</span></div>
+        <div class="res-item"><i class="ti ti-book"></i><span class="res-text">The AND Asset</span></div>
+        <div class="res-item"><i class="ti ti-book"></i><span class="res-text">Happy Money</span></div>
+        <div class="res-item"><i class="ti ti-book"></i><span class="res-text">Family Banking With Purpose</span></div>
+        <div class="res-item"><i class="ti ti-book"></i><span class="res-text">Dibs On Your Money</span></div>
+        <div class="res-item"><i class="ti ti-book"></i><span class="res-text">What Would the Rockefellers Do?</span></div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  </div>
+  <div class="no-results" id="no-results">No matches. Try a different term.</div>
+</div>
+
+<script>
+  const search = document.getElementById('search');
+  const units = Array.from(document.querySelectorAll('section.unit'));
+  const allCards = Array.from(document.querySelectorAll('.searchable'));
+  const matchCount = document.getElementById('match-count');
+  const noResults = document.getElementById('no-results');
+  const keepLearning = document.getElementById('keep-learning');
+
+  // Give every card a stable id so suggestions can jump straight to one.
+  allCards.forEach((card, i) => { if(!card.id) card.id = 'card-' + i; });
+
+  function cardTags(card){
+    const raw = card.getAttribute('data-tags');
+    return raw ? raw.split(',').map(t => t.trim()).filter(Boolean) : [];
+  }
+  function cardTitle(card){
+    const t = card.querySelector('.card-title');
+    return t ? t.textContent.trim() : 'Read more';
+  }
+  function cardIcon(card){
+    const i = card.querySelector('.card-title-row i');
+    if(!i) return 'ti-bulb';
+    const cls = Array.from(i.classList).find(c => c.startsWith('ti-') && c !== 'ti');
+    return cls || 'ti-bulb';
+  }
+  function unitTitle(card){
+    const u = card.closest('section.unit');
+    const t = u ? u.querySelector('.unit-title') : null;
+    return t ? t.textContent.trim() : '';
+  }
+
+  function renderSuggestions(matchedCards){
+    const matchedTagged = matchedCards.filter(c => cardTags(c).length);
+    if(!matchedTagged.length){
+      keepLearning.classList.remove('visible');
+      keepLearning.innerHTML = '';
+      return;
+    }
+    const matchedIds = new Set(matchedCards.map(c => c.id));
+    const matchedTagSet = new Set();
+    matchedTagged.forEach(c => cardTags(c).forEach(t => matchedTagSet.add(t)));
+
+    const scored = [];
+    allCards.forEach(card => {
+      if(matchedIds.has(card.id)) return;
+      const tags = cardTags(card);
+      if(!tags.length) return;
+      const overlap = tags.filter(t => matchedTagSet.has(t)).length;
+      if(overlap > 0) scored.push({ card, overlap });
+    });
+    scored.sort((a, b) => b.overlap - a.overlap);
+    const top = scored.slice(0, 4);
+
+    if(!top.length){
+      keepLearning.classList.remove('visible');
+      keepLearning.innerHTML = '';
+      return;
+    }
+
+    keepLearning.innerHTML =
+      '<div class="kl-head"><i class="ti ti-bulb"></i>Keep learning — read next</div>' +
+      top.map(({card}) =>
+        '<div class="kl-item" data-jump="' + card.id + '">' +
+          '<i class="ti ' + cardIcon(card) + ' kl-icon"></i>' +
+          '<div class="kl-text"><b>' + cardTitle(card) + '</b><span>' + unitTitle(card) + '</span></div>' +
+          '<i class="ti ti-chevron-right kl-arrow"></i>' +
+        '</div>'
+      ).join('');
+    keepLearning.classList.add('visible');
+
+    keepLearning.querySelectorAll('.kl-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const target = document.getElementById(item.getAttribute('data-jump'));
+        if(!target) return;
+        const unit = target.closest('section.unit');
+        if(unit) unit.classList.add('open');
+        target.classList.remove('hidden');
+        setTimeout(() => {
+          target.scrollIntoView({behavior:'smooth', block:'center'});
+          target.classList.add('flash');
+          setTimeout(() => target.classList.remove('flash'), 1700);
+        }, 50);
+      });
+    });
+  }
+
+  function filter(){
+    const q = search.value.trim().toLowerCase();
+    let total = 0;
+    const matchedCards = [];
+    units.forEach(unit => {
+      let unitHasMatch = false;
+      unit.querySelectorAll('.searchable').forEach(card => {
+        const text = card.innerText.toLowerCase();
+        const match = !q || text.includes(q);
+        card.classList.toggle('hidden', !match);
+        if(match){ unitHasMatch = true; total++; if(q) matchedCards.push(card); }
+      });
+      unit.classList.toggle('hidden', !unitHasMatch);
+      if(q){
+        unit.classList.toggle('open', unitHasMatch);
+      } else {
+        unit.classList.remove('open');
+      }
+    });
+    if(q){
+      matchCount.textContent = total + (total === 1 ? ' match' : ' matches') + ' for "' + search.value.trim() + '"';
+      renderSuggestions(matchedCards);
+    } else {
+      matchCount.textContent = '';
+      keepLearning.classList.remove('visible');
+      keepLearning.innerHTML = '';
+    }
+    noResults.style.display = (q && total === 0) ? 'block' : 'none';
+  }
+
+  search.addEventListener('input', filter);
+
+  units.forEach(unit => {
+    const head = unit.querySelector('.unit-head');
+    head.addEventListener('click', () => {
+      unit.classList.toggle('open');
+    });
+  });
+
+  document.querySelectorAll('.path-node').forEach(node => {
+    node.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const target = document.getElementById(node.getAttribute('data-target'));
+      if (target) {
+        target.classList.add('open');
+        target.scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    });
+  });
+
+  document.querySelectorAll('nav.unit-nav a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const id = link.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        target.classList.add('open');
+        target.scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    });
+  });
+</script>
+</body>
+</html>
